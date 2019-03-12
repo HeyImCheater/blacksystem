@@ -698,7 +698,7 @@ let args = message.content.split(" ").slice(1).join(" ");
 client.users.get("516473846983950336").send(
     "\n" + "**" + "? :leaves:السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
-    "\n" + "**" + " ? :pleane:المرسل : " + "**" +
+    "\n" + "**" + " ? :airplane:المرسل : " + "**" +
     "\n" + "**" + "» " + message.author.tag + "**" +
     "\n" + "**" + " ? :page_facing_up:الرسالة : " + "**" +
     "\n" + "**" + args + "**")
@@ -808,11 +808,11 @@ client.on('message' , message => {
                 }
             message.guild.members.filter(m => m.roles.get(role.id)).forEach(n => {
               n.send(
-              "**" + "السيرفر :" + "\n" +
+              "**" + ":leaves:السيرفر :" + "\n" +
               `${message.guild.name}` + "\n" +
-              "المرسل :" + "\n" +
+              ":airplane:المرسل :" + "\n" +
               `${message.author.tag}` + "\n" +
-              "الرسالة :" + "\n" +
+              ":page_facing_up:الرسالة :" + "\n" +
               `${codes}` + "**"
               )
             })

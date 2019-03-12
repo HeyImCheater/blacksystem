@@ -27,7 +27,7 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
-const prefix = '-';
+const prefix = '#';
 var table = require('table').table
 var ti={}  
 ,spee={}
@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['-help','Type -help'];
+    var setGame = ['#help','#help'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -97,7 +97,6 @@ ${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت
         ***__Administrative Orders__***
 **
 ${prefix}move @user /  لسحب الشخص الى روومك
-${prefix}bc / رسالة جماعية الى كل اعضاء السيرفر
 ${prefix}rolebc <everyone or @role> / راسال رساله جماعيه لرتبه محدده
 ${prefix}role @user <rank> / لأعطاء رتبة لعضو معين
 ${prefix}roleremove @user <rank> / لازالة الرتبة من شخص معين
@@ -126,14 +125,7 @@ ${prefix}deletecolors <number> / لحذف الالوان
    `,`
         ***__Music orders__***
 **
-${prefix}play / لتشغيل أغنية برآبط أو بأسم
-${prefix}skip / لتجآوز الأغنية الحآلية
-${prefix}pause / إيقآف الأغنية مؤقتا
-${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-${prefix}vol / لتغيير درجة الصوت 100 - 0
-${prefix}stop / لإخرآج البوت من الروم
-${prefix}np / لمعرفة الأغنية المشغلة حآليا
-${prefix}queue / لمعرفة قآئمة التشغيل
+${prefix}Soon / قريبأ
 **
        =.=.=.=.=.
 welcome يتم الترحيب فى روم باسم
@@ -278,7 +270,7 @@ client.on('message', function(msg) {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO Wings Community ©`` ')
+            .setTitle('``INFO Black NetWork!`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``servers``', [client.guilds.size], true)
@@ -288,7 +280,7 @@ client.on('message', function(msg) {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ - ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By | HeyImMnk')
+			      .setFooter('By | HeyImMnK_ Wings-NetWork')
     })
 }
 });
@@ -375,7 +367,7 @@ client.on('message', message => {
             message.channel.send({embed: {
                 color: 3447003,
                 author: {
-                  name: 'Wings Community ©\'s translator',
+		  name: 'Black NetWork\'s translator',
                   icon_url: client.user.avatarURL
                 },
                 fields: [{
@@ -386,7 +378,7 @@ client.on('message', message => {
                 timestamp: new Date(),
                 footer: {
                   icon_url: client.user.avatarURL,
-                  text: "Wings Community ©"
+                  text: "Black NetWork"
                 }
             }}
             )
@@ -704,18 +696,18 @@ let args = message.content.split(" ").slice(1).join(" ");
 
 
 client.users.get("516473846983950336").send(
-    "\n" + "**" + "? السيرفر :" + "**" +
+    "\n" + "**" + "? :leaves:السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
-    "\n" + "**" + " ? المرسل : " + "**" +
+    "\n" + "**" + " ? :pleane:المرسل : " + "**" +
     "\n" + "**" + "» " + message.author.tag + "**" +
-    "\n" + "**" + " ? الرسالة : " + "**" +
+    "\n" + "**" + " ? :page_facing_up:الرسالة : " + "**" +
     "\n" + "**" + args + "**")
 
 let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("By : HeyImMnk")
+     .setFooter("By : HeyImMnK_")
                                                 
 
 message.channel.send(embed);
